@@ -1,0 +1,19 @@
+class Solution {
+    public int minimumOperations(int[] nums) {
+        int r,c=0;
+        for(int i = 0; i<nums.length; i++){
+            r=0;
+            r=nums[i]%3;
+            if(r==1){
+            nums[i]=nums[i]-1;
+            c++;}
+            else if(r==2){
+                 nums[i]=nums[i]+1;
+                 c++;
+            }
+            else if(r==0)
+            continue;
+        }
+        return c;
+    }
+}
